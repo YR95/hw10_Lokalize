@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  text-decoration: #333333;
 }
 
 .navigation {
@@ -113,37 +112,73 @@
   display: grid;
   grid-template-rows: auto auto auto auto;
 }
-.blocks__first {
+.blocks__first, .blocks__second, .blocks__third, .blocks__fourth {
   display: grid;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto auto;
   padding: 8%;
 }
-.blocks__first__infos {
+.blocks__first__infos, .blocks__second__infos, .blocks__third__infos, .blocks__fourth__infos {
   display: flex;
   flex-direction: column;
 }
-.blocks__first__infos__header {
+.blocks__first__infos__header, .blocks__second__infos__header, .blocks__third__infos__header, .blocks__fourth__infos__header {
   font-family: Roboto;
   font-size: 50px;
   padding: 3%;
 }
-.blocks__first__infos__main-info {
+.blocks__first__infos__main-info, .blocks__second__infos__main-info, .blocks__third__infos__main-info, .blocks__fourth__infos__main-info {
   font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
   padding: 3%;
 }
-.blocks__first__infos__epilog {
+.blocks__first__infos__epilog, .blocks__second__infos__epilog, .blocks__third__infos__epilog, .blocks__fourth__infos__epilog {
   font-family: Roboto;
   font-size: 20px;
   font-weight: 600;
   padding: 3%;
   text-align: left;
 }
-.blocks__first__infos__image {
+.blocks__first__infos__image, .blocks__second__infos__image, .blocks__third__infos__image, .blocks__fourth__infos__image {
   padding: 3%;
   grid-area: 1/2/span 2/span 2;
+}
+
+.lokalise {
+  padding: 8%;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  background: #FFF8E4;
+  grid-gap: 25px;
+}
+.lokalise__logo {
+  padding: 2%;
+  grid-area: 1/1/span 1/span 3;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: 600;
+}
+.lokalise__elem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.lokalise__elem__title {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 3%;
+  text-align: center;
+}
+.lokalise__elem__info {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 3%;
+  text-align: center;
 }
 
 
