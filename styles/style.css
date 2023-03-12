@@ -71,19 +71,42 @@
   font-size: 25px;
   font-weight: 400;
 }
-.intro__intro-buttons {
-  display: flex;
-  align-items: center;
-}
-.intro __info-subscription {
+.intro__info-subscription {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 400;
 }
-
-.item5 {
+.intro__logo {
   grid-area: 1/2/span 4/span 2;
   max-height: 530px;
+  background-size: cover;
+  background-position: center;
+}
+
+.partners {
+  background-color: #FF9C7D;
+  display: grid;
+  grid-template-rows: auto auto;
+  /* gap: 10px; */
+  padding: 5%;
+  align-items: center;
+  align-content: center;
+}
+.partners__info {
+  grid-area: 1/1/span 2/span 2;
+  font-family: Roboto;
+  font-size: 50px;
+  font-weight: 600;
+  white-space: pre-wrap;
+  text-align: center;
+}
+.partners__list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  align-content: center;
+  padding: 15px;
+  gap: 10%;
 }
 
 

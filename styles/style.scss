@@ -78,7 +78,6 @@
     font-family: Roboto;
     font-size: 65px;
     font-weight: 600;
-    background-color: red;
   }
 
   &__info-block {
@@ -88,12 +87,7 @@
 
   }
 
-  //&__buttons{
-  //  display: flex;
-  //  flex-direction: column;
-  //  align-items: center;
-  //
-  //}
+
   &__info-subscription {
     font-family: Roboto;
     font-size: 15px;
@@ -101,7 +95,7 @@
 
   }
 
-  &__item {
+  &__logo {
     grid-area: 1 / 2 / span 4 / span 2;
     max-height: 530px;
     background-size: cover;
@@ -110,16 +104,10 @@
 }
 
 
-//.item5 {
-//  grid-area: 1 / 2 / span 4 / span 2;
-//  max-height: 530px;
-//  background-size: cover;
-//  background-position: center;
-//}
 
 
 .partners {
-  color: #FF9C7D;
+  background-color: #FF9C7D;
   display: grid;
   grid-template-rows: auto auto;
   /* gap: 10px; */
@@ -132,7 +120,8 @@
     font-family: Roboto;
     font-size: 50px;
     font-weight: 600;
-
+    white-space: pre-wrap;
+    text-align: center;
 
   }
 
@@ -140,6 +129,9 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    align-content: center;
+    padding: 15px;
+    gap: 10%;
   }
 
 }
