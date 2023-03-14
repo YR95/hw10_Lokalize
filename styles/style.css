@@ -362,6 +362,19 @@
   color: black;
 }
 
+.rights {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  gap: 30%;
+  padding: 2% 0 2% 0;
+  background: #EEEEEE;
+}
+
+.rights > div > * {
+  padding-bottom: 2%;
+}
+
 
 
 /*# sourceMappingURL=style.css.map */
