@@ -343,6 +343,10 @@
     font-size: 25px;
     font-weight: 400;
     margin-top: 2%;
+
+    &-isSmaller {
+      font-size: 20px;
+    }
   }
 
   &__button {
@@ -357,6 +361,9 @@
     color: white;
     margin-top: 2%;
 
+    &-isRecoloured {
+      background: #000000;
+    }
   }
 
   &__pic {
@@ -364,19 +371,88 @@
     margin-top: 2%;
   }
 
-  &-isSmaller {
-    font-size: 20px;
-  }
-  &-isRecoloured {
-    background: #000000;
-  }
 
-  &-isChangedBackGround{
+  &-isChangedBackGround {
     background: #FF9C7D;
-    padding: 5% 0 5% 0;
   }
 }
 
+.studies {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2%;
+  border-bottom: 2px solid #000000;
+  background: #EEEEEE;
+
+
+  &__header {
+    font-family: Roboto;
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 2%;
+
+  }
+
+  &__case {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  &__options {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 10%;
+  }
+
+  &__logo {
+    max-width: 300px;
+    padding: 2% 0 2% 0;
+
+    &-isResized {
+      max-width: 80px;
+
+    }
+  }
+
+  &__info {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 400;
+    padding: 2% 0 2% 0;
+
+  }
+
+  &__reading {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+
+  }
+
+  &__options > p {
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  &__options > ul > li {
+    font-family: Roboto;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    margin-bottom: 15px;
+
+  }
+
+  &__options > ul > li > a {
+    text-decoration: none;
+    color: black;
+
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
 
