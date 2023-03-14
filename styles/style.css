@@ -11,33 +11,34 @@
   justify-content: space-around;
   border-bottom: rgba(0, 0, 0, 0.5) inset;
 }
-.navigation__left-panel {
+.navigation__panel {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-.navigation__left-panel__links {
+.navigation__links {
   display: flex;
 }
-.navigation__left-panel__links li {
+.navigation__links li {
   padding: 15px;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
 }
-.navigation__left-panel__links a {
+.navigation__links a {
   text-decoration: none rgb(0, 0, 0);
 }
-.navigation__buttons {
+
+.buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
   margin: 20px;
 }
-.navigation__buttons__log-in {
+.buttons__log-in {
   font-family: Roboto;
   font-size: 16px;
   border-color: rgba(0, 0, 0, 0.5);
@@ -46,10 +47,10 @@
   white-space: nowrap;
   padding: 10px 20px;
 }
-.navigation__buttons__try-it {
+.buttons__try-it {
   font-family: Roboto;
   font-size: 16px;
-  border-color: lightgray;
+  border-color: rgba(0, 0, 0, 0.5);
   background-color: rgb(255, 156, 125);
   text-align: center;
   white-space: nowrap;
@@ -60,8 +61,7 @@
 .intro {
   display: grid;
   grid-template-columns: 40% 60%;
-  grid-template-rows: auto auto auto auto;
-  /* gap: 10px; */
+  grid-template-rows: repeat(4, auto);
   padding: 5%;
   align-items: center;
   align-content: center;
@@ -71,12 +71,12 @@
   font-size: 65px;
   font-weight: 600;
 }
-.intro__info-block {
+.intro__info {
   font-family: Roboto;
   font-size: 25px;
   font-weight: 400;
 }
-.intro__info-subscription {
+.intro__subscription {
   font-family: Roboto;
   font-size: 15px;
   font-weight: 400;
@@ -117,7 +117,7 @@
 
 .blocks {
   display: grid;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: repeat(4, auto);
 }
 .blocks__first, .blocks__second, .blocks__third, .blocks__fourth {
   display: grid;
@@ -125,31 +125,31 @@
   grid-template-rows: auto auto auto auto;
   padding: 8%;
 }
-.blocks__first__infos, .blocks__second__infos, .blocks__third__infos, .blocks__fourth__infos {
+.blocks__first__image, .blocks__second__image, .blocks__third__image, .blocks__fourth__image {
+  padding: 3%;
+  grid-area: 1/2/span 2/span 2;
+}
+.blocks__infos {
   display: flex;
   flex-direction: column;
 }
-.blocks__first__infos__header, .blocks__second__infos__header, .blocks__third__infos__header, .blocks__fourth__infos__header {
+.blocks__header {
   font-family: Roboto;
   font-size: 50px;
   padding: 3%;
 }
-.blocks__first__infos__main-info, .blocks__second__infos__main-info, .blocks__third__infos__main-info, .blocks__fourth__infos__main-info {
+.blocks__main-info {
   font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
   padding: 3%;
 }
-.blocks__first__infos__epilog, .blocks__second__infos__epilog, .blocks__third__infos__epilog, .blocks__fourth__infos__epilog {
+.blocks__epilog {
   font-family: Roboto;
   font-size: 20px;
   font-weight: 600;
   padding: 3%;
   text-align: left;
-}
-.blocks__first__infos__image, .blocks__second__infos__image, .blocks__third__infos__image, .blocks__fourth__infos__image {
-  padding: 3%;
-  grid-area: 1/2/span 2/span 2;
 }
 
 .lokalise {
@@ -173,14 +173,14 @@
   flex-direction: column;
   align-items: center;
 }
-.lokalise__elem__title {
+.lokalise__title {
   font-family: Roboto;
   font-size: 25px;
   font-weight: 600;
   padding-bottom: 3%;
   text-align: center;
 }
-.lokalise__elem__info {
+.lokalise__info {
   font-family: Roboto;
   font-size: 18px;
   font-weight: 400;
@@ -317,8 +317,8 @@
   align-items: flex-start;
   justify-content: center;
   padding: 2%;
-  border-bottom: 2px solid #000000;
-  background: #EEEEEE;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
 }
 .studies__header {
   font-family: Roboto;
@@ -347,7 +347,7 @@
   font-family: Roboto;
   font-size: 20px;
   font-weight: 400;
-  padding: 2% 0 2% 0;
+  padding-bottom: 2%;
 }
 .studies__reading {
   font-family: Roboto;
