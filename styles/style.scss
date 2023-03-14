@@ -1,3 +1,11 @@
+$brown-color:rgba(255, 156, 125, 1);
+$sand-color:rgba(255, 248, 228, 1);
+$blue-color:rgba(201, 232, 242, 1);
+$mustard-color:rgba(218, 188, 152, 1);
+$black-color:rgba(0, 0, 0, 1);
+$white-color:rgba(255, 255, 255, 1);
+$grey-color:rgba(0, 0, 0, 0.5);
+
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: lightgray inset;
+  border-bottom: $grey-color inset;
 
 
   &__left-panel {
@@ -27,6 +35,9 @@
         font-size: 15px;
         font-weight: 400;
         white-space: nowrap;
+      }
+      a{
+        text-decoration: none $black-color;
       }
     }
 
@@ -54,11 +65,11 @@
       font-family: Roboto;
       font-size: 16px;
       border-color: lightgray;
-      background-color: #FF6336;
+      background-color: $brown-color;
       text-align: center;
       white-space: nowrap;
       padding: 10px 20px;
-      color: white;
+      color: $white-color;
     }
   }
 
@@ -105,7 +116,7 @@
 
 
 .partners {
-  background-color: #FF9C7D;
+  background-color: $brown-color;
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto;
@@ -187,7 +198,7 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  background: #FFF8E4;
+  background: $sand-color;
   grid-gap: 25px;
 
   &__logo {
@@ -271,7 +282,7 @@
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: auto auto;
-  background: #C9E8F2;
+  background: $blue-color;
   padding: 3%;
   column-gap: 25px;
 
@@ -295,7 +306,7 @@
 }
 
 .translators {
-  background: #DABC98;
+  background: $mustard-color;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,7 +322,7 @@
     font-weight: 600;
     font-size: 35px;
 
-    border-right: 3px solid black;
+    border-right: 3px solid $black-color;
   }
 
   &__stars {
@@ -354,7 +365,7 @@
     font-family: Roboto;
     font-size: 16px;
     border-color: lightgray;
-    background-color: #FF6336;
+    background-color: $brown-color;
     text-align: center;
     white-space: nowrap;
     padding: 10px 20px;
@@ -362,7 +373,7 @@
     margin-top: 2%;
 
     &-isRecoloured {
-      background: #000000;
+      background: $black-color;
     }
   }
 
@@ -373,7 +384,7 @@
 
 
   &-isChangedBackGround {
-    background: #FF9C7D;
+    background: $brown-color;
   }
 }
 
@@ -449,7 +460,7 @@
 
   &__options > ul > li > a {
     text-decoration: none;
-    color: black;
+    color: $black-color;
 
   }
 }

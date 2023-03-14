@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: lightgray inset;
+  border-bottom: rgba(0, 0, 0, 0.5) inset;
 }
 .navigation__left-panel {
   display: flex;
@@ -24,6 +24,9 @@
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
+}
+.navigation__left-panel__links a {
+  text-decoration: none rgb(0, 0, 0);
 }
 .navigation__buttons {
   display: flex;
@@ -44,11 +47,11 @@
   font-family: Roboto;
   font-size: 16px;
   border-color: lightgray;
-  background-color: #FF6336;
+  background-color: rgb(255, 156, 125);
   text-align: center;
   white-space: nowrap;
   padding: 10px 20px;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 
 .intro {
@@ -83,7 +86,7 @@
 }
 
 .partners {
-  background-color: #FF9C7D;
+  background-color: rgb(255, 156, 125);
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto;
@@ -150,7 +153,7 @@
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto auto auto;
-  background: #FFF8E4;
+  background: rgb(255, 248, 228);
   grid-gap: 25px;
 }
 .lokalise__logo {
@@ -217,7 +220,7 @@
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: auto auto;
-  background: #C9E8F2;
+  background: rgb(201, 232, 242);
   padding: 3%;
   column-gap: 25px;
 }
@@ -236,7 +239,7 @@
 }
 
 .translators {
-  background: #DABC98;
+  background: rgb(218, 188, 152);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -250,7 +253,7 @@
   font-family: Roboto;
   font-weight: 600;
   font-size: 35px;
-  border-right: 3px solid black;
+  border-right: 3px solid rgb(0, 0, 0);
 }
 .translators__stars {
   padding: 5%;
@@ -285,7 +288,7 @@
   font-family: Roboto;
   font-size: 16px;
   border-color: lightgray;
-  background-color: #FF6336;
+  background-color: rgb(255, 156, 125);
   text-align: center;
   white-space: nowrap;
   padding: 10px 20px;
@@ -293,14 +296,14 @@
   margin-top: 2%;
 }
 .tools__button-isRecoloured {
-  background: #000000;
+  background: rgb(0, 0, 0);
 }
 .tools__pic {
   max-width: 1020px;
   margin-top: 2%;
 }
 .tools-isChangedBackGround {
-  background: #FF9C7D;
+  background: rgb(255, 156, 125);
 }
 
 .studies {
@@ -359,7 +362,7 @@
 }
 .studies__options > ul > li > a {
   text-decoration: none;
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 .rights {
