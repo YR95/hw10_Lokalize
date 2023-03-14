@@ -260,6 +260,40 @@
   grid-gap: 35px;
 }
 
+.tools {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3%;
+  align-items: center;
+  text-align: center;
+}
+.tools__header {
+  font-family: Roboto;
+  font-size: 65px;
+  font-weight: 600;
+}
+.tools__info {
+  font-family: Graphik LC TT;
+  font-size: 25px;
+  font-weight: 400;
+  margin-top: 2%;
+}
+.tools__button {
+  font-family: Roboto;
+  font-size: 16px;
+  border-color: lightgray;
+  background-color: #FF6336;
+  text-align: center;
+  white-space: nowrap;
+  padding: 10px 20px;
+  color: white;
+  margin-top: 2%;
+}
+.tools__pic {
+  max-width: 1020px;
+  margin-top: 2%;
+}
+
 
 
 /*# sourceMappingURL=style.css.map */
