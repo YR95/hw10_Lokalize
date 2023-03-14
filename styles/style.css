@@ -6,14 +6,16 @@
 
 .navigation {
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
   border-bottom: rgba(0, 0, 0, 0.5) inset;
 }
 .navigation__left-panel {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 }
 .navigation__left-panel__links {
   display: flex;
@@ -30,6 +32,7 @@
 }
 .navigation__buttons {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 10px;
   margin: 20px;
@@ -37,7 +40,7 @@
 .navigation__buttons__log-in {
   font-family: Roboto;
   font-size: 16px;
-  border-color: lightgray;
+  border-color: rgba(0, 0, 0, 0.5);
   background-color: transparent;
   text-align: center;
   white-space: nowrap;
@@ -104,6 +107,7 @@
 }
 .partners__list {
   display: flex;
+  flex-direction: row;
   align-items: center;
   flex-direction: row;
   align-content: center;
@@ -241,6 +245,7 @@
 .translators {
   background: rgb(218, 188, 152);
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
 }
@@ -266,8 +271,8 @@
 .tools {
   display: flex;
   flex-direction: column;
-  padding: 3% 0 3% 0;
   align-items: center;
+  padding: 3% 0 3% 0;
   text-align: center;
 }
 .tools__header {
@@ -287,7 +292,7 @@
 .tools__button {
   font-family: Roboto;
   font-size: 16px;
-  border-color: lightgray;
+  border-color: rgba(0, 0, 0, 0.5);
   background-color: rgb(255, 156, 125);
   text-align: center;
   white-space: nowrap;
@@ -308,8 +313,9 @@
 
 .studies {
   display: flex;
-  justify-content: center;
+  flex-direction: row;
   align-items: flex-start;
+  justify-content: center;
   padding: 2%;
   border-bottom: 2px solid #000000;
   background: #EEEEEE;

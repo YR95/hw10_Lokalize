@@ -5,6 +5,13 @@ $mustard-color:rgba(218, 188, 152, 1);
 $black-color:rgba(0, 0, 0, 1);
 $white-color:rgba(255, 255, 255, 1);
 $grey-color:rgba(0, 0, 0, 0.5);
+$font-family:Roboto;
+
+@mixin flex($display,$dir,$align-items){
+  display: $display;
+  flex-direction: $dir;
+  align-items: $align-items;
+}
 
 * {
   margin: 0;
@@ -14,16 +21,19 @@ $grey-color:rgba(0, 0, 0, 0.5);
 }
 
 .navigation {
-  display: flex;
-  align-items: center;
+  @include flex(flex,row,center);
+  //display: flex;
+  //align-items: center;
   justify-content: space-around;
   border-bottom: $grey-color inset;
 
 
   &__left-panel {
-    display: flex;
+    @include flex(flex,row,center);
+
+//    display: flex;
     justify-content: space-around;
-    align-items: center;
+//    align-items: center;
 
 
     &__links {
@@ -31,7 +41,7 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
       li {
         padding: 15px;
-        font-family: Roboto;
+        font-family: $font-family;
         font-size: 15px;
         font-weight: 400;
         white-space: nowrap;
@@ -45,16 +55,18 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
 
   &__buttons {
-    display: flex;
-    align-items: center;
+    @include flex(flex,row,center);
+
+    //display: flex;
+    //align-items: center;
     gap: 10px;
     margin: 20px;
 
 
     &__log-in {
-      font-family: Roboto;
+      font-family: $font-family;
       font-size: 16px;
-      border-color: lightgray;
+      border-color: $grey-color;
       background-color: transparent;
       text-align: center;
       white-space: nowrap;
@@ -62,7 +74,7 @@ $grey-color:rgba(0, 0, 0, 0.5);
     }
 
     &__try-it {
-      font-family: Roboto;
+      font-family: $font-family;
       font-size: 16px;
       border-color: lightgray;
       background-color: $brown-color;
@@ -86,13 +98,13 @@ $grey-color:rgba(0, 0, 0, 0.5);
   align-content: center;
 
   &__header {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 65px;
     font-weight: 600;
   }
 
   &__info-block {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 25px;
     font-weight: 400;
 
@@ -100,7 +112,7 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
 
   &__info-subscription {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 15px;
     font-weight: 400;
 
@@ -126,7 +138,7 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
   &__info {
     grid-area: 1 / 1 / span 1 / span 1;
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 50px;
     font-weight: 600;
     white-space: pre-wrap;
@@ -135,8 +147,10 @@ $grey-color:rgba(0, 0, 0, 0.5);
   }
 
   &__list {
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
+    @include flex(flex,row,center);
+
     flex-direction: row;
     align-content: center;
     padding: 15px;
@@ -163,14 +177,14 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
 
       &__header {
-        font-family: Roboto;
+        font-family: $font-family;
         font-size: 50px;
         padding: 3%;
       }
 
       &__main-info {
 
-        font-family: Roboto;
+        font-family: $font-family;
         font-size: 20px;
         font-weight: 400;
         padding: 3%;
@@ -178,7 +192,7 @@ $grey-color:rgba(0, 0, 0, 0.5);
       }
 
       &__epilog {
-        font-family: Roboto;
+        font-family: $font-family;
         font-size: 20px;
         font-weight: 600;
         padding: 3%;
@@ -206,20 +220,22 @@ $grey-color:rgba(0, 0, 0, 0.5);
     grid-area: 1 / 1 / span 1 / span 3;
     text-align: center;
 
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 50px;
     font-weight: 600;
 
   }
 
   &__elem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(flex,column,center);
+
+    //display: flex;
+    //flex-direction: column;
+    //align-items: center;
 
 
     &__title {
-      font-family: Roboto;
+      font-family: $font-family;
       font-size: 25px;
       font-weight: 600;
       padding-bottom: 3%;
@@ -228,7 +244,7 @@ $grey-color:rgba(0, 0, 0, 0.5);
     }
 
     &__info {
-      font-family: Roboto;
+      font-family: $font-family;
       font-size: 18px;
       font-weight: 400;
       padding-top: 3%;
@@ -250,14 +266,14 @@ $grey-color:rgba(0, 0, 0, 0.5);
   &__header {
     grid-area: 1 / 1 / span 1 / span 3;
     text-align: center;
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 50px;
     font-weight: 600;
 
   }
 
   &__title {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 30px;
     font-weight: 600;
 
@@ -265,13 +281,13 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
   &__info {
 
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 20px;
     font-weight: 400;
   }
 
   &__link {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 20px;
     font-weight: 400;
 
@@ -293,13 +309,13 @@ $grey-color:rgba(0, 0, 0, 0.5);
   }
 
   &__info {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 30px;
     font-weight: 400;
   }
 
   &__author {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 15px;
     font-weight: 400;
   }
@@ -307,8 +323,9 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
 .translators {
   background: $mustard-color;
-  display: flex;
-  align-items: center;
+  //display: flex;
+  //align-items: center;
+  @include flex(flex,row,center);
   justify-content: center;
 
   &__item {
@@ -318,7 +335,7 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
   &__info {
     padding-left: 5%;
-    font-family: Roboto;
+    font-family: $font-family;
     font-weight: 600;
     font-size: 35px;
 
@@ -337,20 +354,22 @@ $grey-color:rgba(0, 0, 0, 0.5);
 }
 
 .tools {
-  display: flex;
-  flex-direction: column;
+  //display: flex;
+  //flex-direction: column;
+  //align-items: center;
+
+  @include flex(flex,column,center);
   padding: 3% 0 3% 0;
-  align-items: center;
   text-align: center;
 
   &__header {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 65px;
     font-weight: 600;
   }
 
   &__info {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 25px;
     font-weight: 400;
     margin-top: 2%;
@@ -362,9 +381,9 @@ $grey-color:rgba(0, 0, 0, 0.5);
 
   &__button {
 
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 16px;
-    border-color: lightgray;
+    border-color: $grey-color;
     background-color: $brown-color;
     text-align: center;
     white-space: nowrap;
@@ -389,16 +408,17 @@ $grey-color:rgba(0, 0, 0, 0.5);
 }
 
 .studies {
-  display: flex;
+  //display: flex;
+  //align-items: flex-start;
+  @include flex(flex,row,flex-start);
   justify-content: center;
-  align-items: flex-start;
   padding: 2%;
   border-bottom: 2px solid #000000;
   background: #EEEEEE;
 
 
   &__header {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 40px;
     font-weight: 600;
     padding-bottom: 2%;
@@ -429,7 +449,7 @@ $grey-color:rgba(0, 0, 0, 0.5);
   }
 
   &__info {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 20px;
     font-weight: 400;
     padding: 2% 0 2% 0;
@@ -437,20 +457,20 @@ $grey-color:rgba(0, 0, 0, 0.5);
   }
 
   &__reading {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 20px;
     font-weight: 600;
 
   }
 
   &__options > p {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 20px;
     font-weight: 600;
   }
 
   &__options > ul > li {
-    font-family: Roboto;
+    font-family: $font-family;
     font-size: 15px;
     font-weight: 400;
     white-space: nowrap;
