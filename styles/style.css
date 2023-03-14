@@ -318,7 +318,7 @@
   justify-content: center;
   padding: 2%;
   border-bottom: 2px solid rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(238, 238, 238);
 }
 .studies__header {
   font-family: Roboto;
@@ -377,7 +377,7 @@
   justify-content: space-around;
   gap: 30%;
   padding: 2% 0 2% 0;
-  background: #EEEEEE;
+  background: rgb(238, 238, 238);
 }
 
 .rights > div > * {

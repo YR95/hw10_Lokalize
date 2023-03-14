@@ -5,6 +5,7 @@ $mustard-color: rgba(218, 188, 152, 1);
 $black-color: rgba(0, 0, 0, 1);
 $white-color: rgba(255, 255, 255, 1);
 $grey-color: rgba(0, 0, 0, 0.5);
+$light-grey:rgba(238, 238, 238, 1);
 $font-family: Roboto;
 
 @mixin flex($display,$dir,$align-items) {
@@ -390,7 +391,7 @@ $font-family: Roboto;
   justify-content: center;
   padding: 2%;
   border-bottom: 2px solid $black-color;
-  background: $grey-color;
+  background: $light-grey;
 
 
   &__header {
@@ -467,7 +468,7 @@ $font-family: Roboto;
   justify-content: space-around;
   gap: 30%;
   padding: 2% 0 2% 0;
-  background: #EEEEEE;
+  background: $light-grey;
 }
 
 .rights > div > * {
