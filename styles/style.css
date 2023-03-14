@@ -263,7 +263,7 @@
 .tools {
   display: flex;
   flex-direction: column;
-  padding-top: 3%;
+  padding: 3% 0 3% 0;
   align-items: center;
   text-align: center;
 }
@@ -273,7 +273,7 @@
   font-weight: 600;
 }
 .tools__info {
-  font-family: Graphik LC TT;
+  font-family: Roboto;
   font-size: 25px;
   font-weight: 400;
   margin-top: 2%;
@@ -292,6 +292,16 @@
 .tools__pic {
   max-width: 1020px;
   margin-top: 2%;
+}
+.tools-isSmaller {
+  font-size: 20px;
+}
+.tools-isRecoloured {
+  background: #000000;
+}
+.tools-isChangedBackGround {
+  background: #FF9C7D;
+  padding: 5% 0 5% 0;
 }
 
 
