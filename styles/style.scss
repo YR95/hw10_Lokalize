@@ -5,13 +5,33 @@ $mustard-color: rgba(218, 188, 152, 1);
 $black-color: rgba(0, 0, 0, 1);
 $white-color: rgba(255, 255, 255, 1);
 $grey-color: rgba(0, 0, 0, 0.5);
-$light-grey:rgba(238, 238, 238, 1);
+$light-grey: rgba(238, 238, 238, 1);
 $font-family: Roboto;
 
 @mixin flex($display,$dir,$align-items) {
   display: $display;
   flex-direction: $dir;
   align-items: $align-items;
+}
+
+@mixin flex_full($display,$dir,$align-items,$justify-cnt) {
+  display: $display;
+  flex-direction: $dir;
+  align-items: $align-items;
+  justify-content: $justify-cnt;
+}
+
+@mixin grid($display,$gtc,$gtr) {
+  display: $display;
+  grid-template-columns: $gtc;
+  grid-template-rows: $gtr;
+}
+
+@mixin font_settings($font-family, $font-size,$font-weight) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+
 }
 
 * {
@@ -21,15 +41,12 @@ $font-family: Roboto;
 }
 
 .navigation {
-  @include flex(flex, row, center);
+  @include flex_full(flex, row, center, space-around);
 
-  justify-content: space-around;
   border-bottom: $grey-color inset;
 
-
   &__panel {
-    @include flex(flex, row, center);
-    justify-content: space-around;
+    @include flex_full(flex, row, center, space-around);
   }
 
   &__links {
@@ -37,9 +54,7 @@ $font-family: Roboto;
 
     li {
       padding: 15px;
-      font-family: $font-family;
-      font-size: 15px;
-      font-weight: 400;
+      @include font_settings($font-family, 15px, 400);
       white-space: nowrap;
     }
 
@@ -47,8 +62,6 @@ $font-family: Roboto;
       text-decoration: none $black-color;
     }
   }
-
-
 }
 
 .buttons {
@@ -59,8 +72,7 @@ $font-family: Roboto;
 
 
   &__log-in {
-    font-family: $font-family;
-    font-size: 16px;
+    @include font_settings($font-family, 16px, 600);
     border-color: $grey-color;
     background-color: transparent;
     text-align: center;
@@ -69,8 +81,7 @@ $font-family: Roboto;
   }
 
   &__try-it {
-    font-family: $font-family;
-    font-size: 16px;
+    @include font_settings($font-family, 16px, 600);
     border-color: $grey-color;
     background-color: $brown-color;
     text-align: center;
@@ -81,32 +92,24 @@ $font-family: Roboto;
 }
 
 .intro {
-  display: grid;
-  grid-template-columns: 40% 60%;
-  grid-template-rows: repeat(4, auto);
+
+  @include grid(grid, 40% 60%, repeat(4, auto));
+
   padding: 5%;
   align-items: center;
   align-content: center;
 
   &__header {
-    font-family: $font-family;
-    font-size: 65px;
-    font-weight: 600;
+    @include font_settings($font-family, 65px, 600);
   }
 
   &__info {
-    font-family: $font-family;
-    font-size: 25px;
-    font-weight: 400;
-
+    @include font_settings($font-family, 25px, 400);
   }
 
 
   &__subscription {
-    font-family: $font-family;
-    font-size: 15px;
-    font-weight: 400;
-
+    @include font_settings($font-family, 15px, 400);
   }
 
   &__logo {
@@ -120,18 +123,14 @@ $font-family: Roboto;
 
 .partners {
   background-color: $brown-color;
-  display: grid;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto;
+  @include grid(grid, auto, repeat(2, auto));
   padding: 4%;
   align-items: center;
   align-content: center;
 
   &__info {
     grid-area: 1 / 1 / span 1 / span 1;
-    font-family: $font-family;
-    font-size: 50px;
-    font-weight: 600;
+    @include font_settings($font-family, 50px, 600);
     white-space: pre-wrap;
     text-align: center;
 
@@ -139,31 +138,24 @@ $font-family: Roboto;
 
   &__list {
 
-    @include flex(flex, row, center);
-
+    @include flex_full(flex, row, center, center);
     flex-direction: row;
-    align-content: center;
-    padding: 15px;
+    padding-top: 3%;
     gap: 120px;
   }
-
 }
 
 .blocks {
-  display: grid;
-  grid-template-rows: repeat(4, auto);
 
+  @include grid(grid, auto, repeat(4, auto));
   &__first, &__second, &__third, &__fourth {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto auto auto auto;
+    @include grid(grid, 50% 50%, repeat(4, auto));
     padding: 8%;
 
     &__image {
       padding: 3%;
       grid-area: 1 / 2 / span 2 / span 2;
     }
-
   }
 
   &__infos {
@@ -172,36 +164,28 @@ $font-family: Roboto;
   }
 
   &__header {
-    font-family: $font-family;
-    font-size: 50px;
+    @include font_settings($font-family, 50px, 600);
     padding: 3%;
   }
 
   &__main-info {
 
-    font-family: $font-family;
-    font-size: 20px;
-    font-weight: 400;
+    @include font_settings($font-family, 20px, 400);
     padding: 3%;
 
   }
 
   &__epilog {
-    font-family: $font-family;
-    font-size: 20px;
-    font-weight: 600;
+    @include font_settings($font-family, 20px, 600);
     padding: 3%;
     text-align: left;
   }
-
 
 }
 
 .lokalise {
   padding: 8%;
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+  @include grid(grid, repeat(3, auto), repeat(3, auto));
   background: $sand-color;
   grid-gap: 25px;
 
@@ -209,11 +193,7 @@ $font-family: Roboto;
     padding: 2%;
     grid-area: 1 / 1 / span 1 / span 3;
     text-align: center;
-
-    font-family: $font-family;
-    font-size: 50px;
-    font-weight: 600;
-
+    @include font_settings($font-family, 50px, 600);
   }
 
   &__elem {
@@ -222,27 +202,21 @@ $font-family: Roboto;
   }
 
   &__title {
-    font-family: $font-family;
-    font-size: 25px;
-    font-weight: 600;
+    @include font_settings($font-family, 25px, 600);
     padding-bottom: 3%;
     text-align: center;
 
   }
 
   &__info {
-    font-family: $font-family;
-    font-size: 18px;
-    font-weight: 400;
+    @include font_settings($font-family, 18px, 400);
     padding-top: 3%;
     text-align: center;
   }
 }
 
 .tenfold {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: auto auto auto;
+  @include grid(grid, repeat(3, auto), repeat(3, auto));
   grid-gap: 35px;
   padding: 5%;
   align-items: center;
@@ -251,42 +225,28 @@ $font-family: Roboto;
   &__header {
     grid-area: 1 / 1 / span 1 / span 3;
     text-align: center;
-    font-family: $font-family;
-    font-size: 50px;
-    font-weight: 600;
+    @include font_settings($font-family, 50px, 600);
 
   }
 
   &__title {
-    font-family: $font-family;
-    font-size: 30px;
-    font-weight: 600;
-
+    @include font_settings($font-family, 30px, 600);
   }
 
   &__info {
-
-    font-family: $font-family;
-    font-size: 20px;
-    font-weight: 400;
+    @include font_settings($font-family, 20px, 400);
   }
 
   &__link {
-    font-family: $font-family;
-    font-size: 20px;
-    font-weight: 400;
-
+    @include font_settings($font-family, 20px, 400);
   }
 }
 
 .chief {
-  display: grid;
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto auto;
+  @include grid(grid, repeat(2, auto), repeat(3, auto));
   background: $blue-color;
   padding: 3%;
   column-gap: 25px;
-
 
   &__photo {
     grid-area: 1 / 2 / span 3 / span 2;
@@ -294,22 +254,17 @@ $font-family: Roboto;
   }
 
   &__info {
-    font-family: $font-family;
-    font-size: 30px;
-    font-weight: 400;
+    @include font_settings($font-family, 30px, 400);
   }
 
   &__author {
-    font-family: $font-family;
-    font-size: 15px;
-    font-weight: 400;
+    @include font_settings($font-family, 15px, 400);
   }
 }
 
 .translators {
   background: $mustard-color;
-  @include flex(flex, row, center);
-  justify-content: center;
+  @include flex_full(flex, row, center, center);
 
   &__item {
     display: flex;
@@ -318,19 +273,13 @@ $font-family: Roboto;
 
   &__info {
     padding-left: 5%;
-    font-family: $font-family;
-    font-weight: 600;
-    font-size: 35px;
-
+    @include font_settings($font-family, 35px, 600);
     border-right: 3px solid $black-color;
   }
 
   &__stars {
     padding: 5%;
-    display: grid;
-
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
+    @include grid(grid, repeat(2, auto), repeat(3, auto));
     grid-gap: 35px;
 
   }
@@ -342,15 +291,11 @@ $font-family: Roboto;
   text-align: center;
 
   &__header {
-    font-family: $font-family;
-    font-size: 65px;
-    font-weight: 600;
+    @include font_settings($font-family, 65px, 600);
   }
 
   &__info {
-    font-family: $font-family;
-    font-size: 25px;
-    font-weight: 400;
+    @include font_settings($font-family, 25px, 400);
     margin-top: 2%;
 
     &-isSmaller {
@@ -359,9 +304,7 @@ $font-family: Roboto;
   }
 
   &__button {
-
-    font-family: $font-family;
-    font-size: 16px;
+    @include font_settings($font-family, 16px, 600);
     border-color: $grey-color;
     background-color: $brown-color;
     text-align: center;
@@ -387,17 +330,14 @@ $font-family: Roboto;
 }
 
 .studies {
-  @include flex(flex, row, flex-start);
-  justify-content: center;
+  @include flex_full(flex, row, flex-start,center);
   padding: 2%;
   border-bottom: 2px solid $black-color;
   background: $light-grey;
 
 
   &__header {
-    font-family: $font-family;
-    font-size: 40px;
-    font-weight: 600;
+    @include font_settings($font-family, 40px, 600);
     padding-bottom: 2%;
 
   }
@@ -405,13 +345,10 @@ $font-family: Roboto;
   &__case {
     display: flex;
     flex-direction: column;
-
   }
 
   &__options {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-template-rows: repeat(2, auto);
+    @include grid(grid, repeat(4, auto), repeat(2, auto));
     grid-gap: 10%;
   }
 
@@ -421,38 +358,26 @@ $font-family: Roboto;
 
     &-isResized {
       max-width: 80px;
-
     }
   }
 
   &__info {
-    font-family: $font-family;
-    font-size: 20px;
-    font-weight: 400;
+    @include font_settings($font-family, 20px, 400);
     padding-bottom: 2%;
-
   }
 
   &__reading {
-    font-family: $font-family;
-    font-size: 20px;
-    font-weight: 600;
-
+    @include font_settings($font-family, 20px, 600);
   }
 
   &__options > p {
-    font-family: $font-family;
-    font-size: 20px;
-    font-weight: 600;
+    @include font_settings($font-family, 20px, 600);
   }
 
   &__options > ul > li {
-    font-family: $font-family;
-    font-size: 15px;
-    font-weight: 400;
+    @include font_settings($font-family, 15px, 400);
     white-space: nowrap;
     margin-bottom: 15px;
-
   }
 
   &__options > ul > li > a {
