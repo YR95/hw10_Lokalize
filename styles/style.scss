@@ -157,47 +157,8 @@ $font-family: Roboto;
   }
 }
 
-.blocks {
-
-  @include grid(grid, auto, repeat(4, auto));
-
-  &__first, &__second, &__third, &__fourth {
-    @include grid(grid, 50% 50%, repeat(4, auto));
-    padding: 8%;
-
-    &__image {
-      padding: 3%;
-      grid-area: 1 / 2 / span 2 / span 2;
-    }
-  }
-
-  &__infos {
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__header {
-    @include font_settings($font-family, 50px, 600);
-    padding: 3%;
-  }
-
-  &__main-info {
-
-    @include font_settings($font-family, 20px, 400);
-    padding: 3%;
-
-  }
-
-  &__epilog {
-    @include font_settings($font-family, 20px, 600);
-    padding: 3%;
-    text-align: left;
-  }
-
-}
-
 .lokalise {
-  padding: 8%;
+  padding: 4%;
   @include grid(grid, repeat(3, auto), repeat(3, auto));
   background: $sand-color;
   grid-gap: 25px;
@@ -395,6 +356,49 @@ $font-family: Roboto;
 .rights > div > * {
   padding-bottom: 2%;
 }
+
+
+
+
+.blocks {
+
+  @include grid(grid, auto, repeat(4, auto));
+}
+
+   .block-item {
+     @include grid(grid, 50% 50%, repeat(4, auto));
+     padding: 8%;
+
+     &__image {
+       padding: 3%;
+       grid-area: 1 / 2 / span 2 / span 2;
+     }
+
+
+     &__infos {
+       display: flex;
+       flex-direction: column;
+     }
+
+     &__header {
+       @include font_settings($font-family, 50px, 600);
+       padding: 3%;
+     }
+
+     &__main-info {
+
+       @include font_settings($font-family, 20px, 400);
+       padding: 3%;
+
+     }
+
+     &__epilog {
+       @include font_settings($font-family, 20px, 600);
+       padding: 3%;
+       text-align: left;
+     }
+   }
+
 
 /*# sourceMappingURL=style.css.map */
 
