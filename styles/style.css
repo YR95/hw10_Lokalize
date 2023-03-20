@@ -11,23 +11,24 @@
   justify-content: space-around;
   border-bottom: rgba(0, 0, 0, 0.5) inset;
 }
-.navigation__panel {
+
+.panel {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
-.navigation__links {
+.panel__list {
   display: flex;
 }
-.navigation__links li {
+.panel__list li {
   padding: 15px;
   font-family: Roboto;
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
 }
-.navigation__links a {
+.panel__list a {
   text-decoration: none rgb(0, 0, 0);
 }
 
@@ -36,7 +37,8 @@
   flex-direction: row;
   align-items: center;
   gap: 10px;
-  margin: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .buttons__log-in {
   font-family: Roboto;
@@ -58,6 +60,17 @@
   white-space: nowrap;
   padding: 10px 20px;
   color: rgb(255, 255, 255);
+}
+.buttons__try-it--isRecolored {
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: rgb(0, 0, 0);
+  margin-top: 20px;
+}
+.buttons__try-it--isReversed {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .intro {
@@ -172,25 +185,6 @@
   font-size: 50px;
   font-weight: 600;
 }
-.lokalise__elem {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.lokalise__title {
-  font-family: Roboto;
-  font-size: 25px;
-  font-weight: 600;
-  padding-bottom: 3%;
-  text-align: center;
-}
-.lokalise__info {
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 400;
-  padding-top: 3%;
-  text-align: center;
-}
 
 .tenfold {
   display: grid;
@@ -224,6 +218,26 @@
   font-weight: 400;
 }
 
+.elem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.elem__title {
+  font-family: Roboto;
+  font-size: 25px;
+  font-weight: 600;
+  padding-bottom: 3%;
+  text-align: center;
+}
+.elem__info {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 400;
+  padding-top: 3%;
+  text-align: center;
+}
+
 .chief {
   display: grid;
   grid-template-columns: repeat(2, auto);
@@ -253,23 +267,24 @@
   align-items: center;
   justify-content: center;
 }
-.translators__item {
-  display: flex;
-  align-content: space-around;
-}
-.translators__info {
-  padding-left: 5%;
-  font-family: Roboto;
-  font-size: 35px;
-  font-weight: 600;
-  border-right: 3px solid rgb(0, 0, 0);
-}
 .translators__stars {
   padding: 5%;
   display: grid;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: repeat(3, auto);
   grid-gap: 35px;
+}
+
+.item {
+  display: flex;
+  align-content: space-around;
+}
+.item__info {
+  padding-left: 5%;
+  font-family: Roboto;
+  font-size: 35px;
+  font-weight: 600;
+  border-right: 3px solid rgb(0, 0, 0);
 }
 
 .tools {
@@ -293,21 +308,6 @@
 .tools__info-isSmaller {
   font-size: 20px;
 }
-.tools__button {
-  font-family: Roboto;
-  font-size: 16px;
-  font-weight: 600;
-  border-color: rgba(0, 0, 0, 0.5);
-  background-color: rgb(255, 156, 125);
-  text-align: center;
-  white-space: nowrap;
-  padding: 10px 20px;
-  color: white;
-  margin-top: 2%;
-}
-.tools__button-isRecoloured {
-  background: rgb(0, 0, 0);
-}
 .tools__pic {
   max-width: 1020px;
   margin-top: 2%;
@@ -325,39 +325,11 @@
   border-bottom: 2px solid rgb(0, 0, 0);
   background: rgb(238, 238, 238);
 }
-.studies__header {
-  font-family: Roboto;
-  font-size: 40px;
-  font-weight: 600;
-  padding-bottom: 2%;
-}
-.studies__case {
-  display: flex;
-  flex-direction: column;
-}
 .studies__options {
   display: grid;
   grid-template-columns: repeat(4, auto);
   grid-template-rows: repeat(2, auto);
   grid-gap: 10%;
-}
-.studies__logo {
-  max-width: 300px;
-  padding: 2% 0 2% 0;
-}
-.studies__logo-isResized {
-  max-width: 80px;
-}
-.studies__info {
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 400;
-  padding-bottom: 2%;
-}
-.studies__reading {
-  font-family: Roboto;
-  font-size: 20px;
-  font-weight: 600;
 }
 .studies__options > p {
   font-family: Roboto;
@@ -374,6 +346,35 @@
 .studies__options > ul > li > a {
   text-decoration: none;
   color: rgb(0, 0, 0);
+}
+
+.case {
+  display: flex;
+  flex-direction: column;
+}
+.case__header {
+  font-family: Roboto;
+  font-size: 40px;
+  font-weight: 600;
+  padding-bottom: 2%;
+}
+.case__logo {
+  max-width: 300px;
+  padding: 2% 0 2% 0;
+}
+.case__logo--isResized {
+  max-width: 80px;
+}
+.case__info {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 400;
+  padding-bottom: 2%;
+}
+.case__reading {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .rights {
